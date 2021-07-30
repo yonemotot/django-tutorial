@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="utf-8">
+   <title>{{title}}</title>
+   <link rel="stylesheet"type="text/css" href="{% static 'hello/css/style.css' %}"/>
+</head>
+<body>
+  <h1>{{title}}</h1>
+    <table>
+     <tr><th>ID</th><td>{{obj.id}}</td></tr>
+     <tr><th>todo_name</th><td>{{obj.name_todo}}</td></tr>
+     <tr><th>todo_content</th><td>{{obj.todo_content}</td></tr>1}
+  
+    <form action="{% url 'delete' id %}" method="post">
+     {% csrf_token %}
+     <tr><td></td><td><input type="submit" value="click"></td></tr>
+     </form>
+     </table>
+</body>
+</html>
